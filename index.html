@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Листопад — Игра</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div id="game-area">
+    <div id="shop" onclick="openShop()">🛒 Магазин</div>
+    <div id="collected-count">🍃: 0 / 15</div>
+</div>
+
+<div id="shop-modal">
+    <h2>Магазин улучшений</h2>
+    <button id="close-shop" onclick="closeShop()">Закрыть</button>
+    <div class="shop-content">
+        <div class="upgrade-card">
+            <h3>Увеличение корзины</h3>
+            <p>+5 мест</p>
+            <p>Стоимость: <span id="basket-cost">15</span> 🍃</p>
+            <button onclick="buyUpgrade('basket')">Купить</button>
+        </div>
+        <div class="upgrade-card">
+            <h3>Ускорение (Уровень <span id="speed-level">1</span>)</h3>
+            <p>Скорость падения увеличивается</p>
+            <p>Стоимость: <span id="speed-cost">15</span> 🍃</p>
+            <button onclick="buyUpgrade('speed')">Купить</button>
+        </div>
+        <div class="upgrade-card">
+            <h3>Больше листиков (30 сек)</h3>
+            <p>Увеличивает поток листиков</p>
+            <p>Стоимость: 30 🍃</p>
+            <button onclick="buyUpgrade('extraLeaves')">Купить</button>
+        </div>
+        <div class="upgrade-card">
+            <h3>Х2 листиков (15 сек)</h3>
+            <p>Двойное количество листиков</p>
+            <p>Стоимость: 50 🍃</p>
+            <button onclick="buyUpgrade('double')">Купить</button>
+        </div>
+    </div>
+</div>
+
+<div id="notifications"></div>
+<script src="./js/main.js"></script>
+</body>
+</html>
